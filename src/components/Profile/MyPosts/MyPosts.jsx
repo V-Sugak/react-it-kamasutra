@@ -6,8 +6,10 @@ const MyPosts = () => {
 
   let postsData = [
     { id: 1, massege: "Hi, how are you?", likeCount: 15 },
-  { id: 1, massege: "It's my first post.", likeCount: 20 }
+    { id: 1, massege: "It's my first post.", likeCount: 20 }
   ]
+
+  let postsElements = postsData.map(p => <Post massege={p.massege} likeCount={p.likeCount} />)
 
   return (
     <div className={s.postsBlock}>
@@ -23,13 +25,12 @@ const MyPosts = () => {
       <div>New post</div>
 
       <div className={s.posts}>
-        <Post massege={postsData[0].massege} likeCount={postsData[0].likeCount} />
-        <Post massege={postsData[1].massege} likeCount={postsData[1].likeCount} />
+        {postsElements}
       </div>
     </div>
 
   )
-}
+} 
 
 export default MyPosts;
 
