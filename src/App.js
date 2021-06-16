@@ -12,25 +12,21 @@ import { Dialogs } from './components/Dialogs/Dialogs'
 
 const App = (props) => {
 
-  return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar />
-        {/*<Dialogs/>*/}
-        <div class="app-wrapper-content">
-          <Route path='/profile'
-            render={() => <Profile state={props.state.profilePage} />} />
-          <Route path='/dialogs'
-            render={() => <Dialogs state={props.state.dialogsPage} />} />
-          <Route path='/news' render={() => <News />} />
-          <Route path='/music' render={() => <Music />} />
-          <Route path='/settings' render={() => <Settings />} />
-
-        </div>
+  return (<BrowserRouter>
+    <div className="app-wrapper">
+      <Header />
+      <Navbar />
+      <div class="app-wrapper-content">
+        <Route path='/profile'
+          render={() => <Profile state={props.state.profilePage} />} />
+        <Route path='/dialogs'
+          render={() => <Dialogs state={props.state.dialogsPage} />} />
+        <Route path='/news' render={() => <News />} />
+        <Route path='/music' render={() => <Music />} />
+        <Route path='/settings' render={() => <Settings />} />
       </div>
-    </BrowserRouter>
-  );
+    </div>
+  </ BrowserRouter>);
 }
 
 
