@@ -24,5 +24,12 @@ export let state = {
     sideBar: {}
 }
 
-
+export let addPost = (postMessage) => {
+        let newPost = {
+        id: 5,
+        massege: postMessage,
+        likeCount: 0
+    };
+    state.profilePage.posts.push(newPost)
+}
 
