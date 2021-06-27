@@ -12,7 +12,8 @@ import { Dialogs } from './components/Dialogs/Dialogs'
 
 const App = (props) => {
 
-  return (<BrowserRouter>
+  return (
+  <BrowserRouter>
     <div className="app-wrapper">
       <Header />
       <Navbar />
@@ -26,8 +27,8 @@ const App = (props) => {
         <Route path='/settings' render={() => <Settings />} />
       </div>
     </div>
-  </ BrowserRouter>);
-}
+  </ BrowserRouter>
+  );}
 
 
 export default App;
