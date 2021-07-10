@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-it-kamasutra/static/css/main.43dcc380.chunk.css",
+    "main.js": "/react-it-kamasutra/static/js/main.9fd471df.chunk.js",
+    "main.js.map": "/react-it-kamasutra/static/js/main.9fd471df.chunk.js.map",
+    "runtime-main.js": "/react-it-kamasutra/static/js/runtime-main.67cbe4af.js",
+    "runtime-main.js.map": "/react-it-kamasutra/static/js/runtime-main.67cbe4af.js.map",
+    "static/js/2.1917a0a7.chunk.js": "/react-it-kamasutra/static/js/2.1917a0a7.chunk.js",
+    "static/js/2.1917a0a7.chunk.js.map": "/react-it-kamasutra/static/js/2.1917a0a7.chunk.js.map",
+    "static/js/3.5c45b649.chunk.js": "/react-it-kamasutra/static/js/3.5c45b649.chunk.js",
+    "static/js/3.5c45b649.chunk.js.map": "/react-it-kamasutra/static/js/3.5c45b649.chunk.js.map",
+    "index.html": "/react-it-kamasutra/index.html",
+    "static/css/main.43dcc380.chunk.css.map": "/react-it-kamasutra/static/css/main.43dcc380.chunk.css.map",
+    "static/js/2.1917a0a7.chunk.js.LICENSE.txt": "/react-it-kamasutra/static/js/2.1917a0a7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67cbe4af.js",
+    "static/js/2.1917a0a7.chunk.js",
+    "static/css/main.43dcc380.chunk.css",
+    "static/js/main.9fd471df.chunk.js"
+  ]
+}
