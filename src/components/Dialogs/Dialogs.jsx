@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './Dialogs.module.css';
 import { DialogsItems } from './DialogsItems/DialogsItem';
-import { Message } from './Message/Message'
+import { Message } from './Message/Message';
+import { updateNewMessageBodytAC, sendMessageAC } from '../../redux/state';
 
 
 export const Dialogs = (props) => {
@@ -10,6 +11,17 @@ export const Dialogs = (props) => {
 
     let messageElements = props.state.messages.map(message => <Message message={message.message} />);
 
+    let newMessageBody = props.state.newMessageBody;
+
+    let onNewMessageBodyChange = (e) => {
+        let body = e.target.value;
+        props.dispatch(updateNewMessageBodytAC(body));
+    }
+
+    let onSendMessageClick = () => {
+        props.dispatch(sendMessageAC());
+    }
+
     return (
         <div className={s.dialogs} >
             <div className={s.dialogsItems}>
@@ -17,7 +29,13 @@ export const Dialogs = (props) => {
             </div>
 
             <div className={s.messages}>
-                {messageElements}
+                <div>{messageElements}</div>
+                <div>
+                    <div>
+                        <textarea placeholder='Enter your message' value={newMessageBody} onChange={onNewMessageBodyChange} ></textarea>
+                    </div>
+                    <div><button onClick={onSendMessageClick} >Send</button></div>
+                </div>
             </div>
         </div>
     )
