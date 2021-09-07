@@ -10,7 +10,6 @@ export let store = {
                 { id: 1, massege: "It's my first post.", likeCount: 20 }
             ],
             newPostText: 'it-kamasutra.com'
-
         },
         dialogsPage: {
             messages: [
