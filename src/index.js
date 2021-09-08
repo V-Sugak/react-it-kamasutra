@@ -6,10 +6,12 @@ import App from './App';
 import store from './redux/redux-store';
 import { HashRouter } from 'react-router-dom';
 
+
+
 let renderEntireTree = (state) => {
     ReactDOM.render(
         <HashRouter>
-            <App state={state} dispatch={store.dispatch.bind(store)} />
+            <App store={store} />
         </ HashRouter>,
         document.getElementById('root')
     );
