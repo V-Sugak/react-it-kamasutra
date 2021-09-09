@@ -5,23 +5,26 @@ import './index.css';
 import App from './App';
 import store from './redux/redux-store';
 import { HashRouter } from 'react-router-dom';
+import { Provider } from './StoreContext';
 
 
 
-let renderEntireTree = (state) => {
+let renderEntireTree = () => {
     ReactDOM.render(
         <HashRouter>
-            <App store={store} />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </ HashRouter>,
         document.getElementById('root')
     );
 }
 
-renderEntireTree(store.getState());
+renderEntireTree();
 
 store.subscribe(() => {
     let state = store.getState();
-    renderEntireTree(state);
+    renderEntireTree();
 });
 
 // If you want to start measuring performance in your app, pass a function
