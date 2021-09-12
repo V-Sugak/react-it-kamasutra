@@ -5,28 +5,16 @@ import './index.css';
 import App from './App';
 import store from './redux/redux-store';
 import { HashRouter } from 'react-router-dom';
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
-
-
-
-let renderEntireTree = () => {
-    ReactDOM.render(
-        <HashRouter>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </ HashRouter>,
-        document.getElementById('root')
-    );
-}
-
-renderEntireTree();
-
-store.subscribe(() => {
-    let state = store.getState();
-    renderEntireTree();
-});
+ReactDOM.render(
+    <HashRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </ HashRouter>,
+    document.getElementById('root')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
